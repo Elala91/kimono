@@ -1,0 +1,313 @@
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    border: none;
+
+    box-sizing: border-box;
+
+    font-family: Lato, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+@font-face {
+  font-family: Lato;
+  src: url(fonts/Lato-Regular.ttf);
+}
+
+body{position:relative;
+z-index: 0;}
+
+
+html {
+  background:url('https://elala91.github.io/odigo/Hero.png');
+  background-size:cover;
+  box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+
+}
+
+
+.container {
+
+    max-width: 90%;
+
+    margin: 56px auto;
+
+}
+
+
+#header {
+
+    display: flex;
+
+    justify-content: space-between;
+    position: relative;
+    z-index: 0;
+
+    align-items: baseline;
+
+}
+
+
+#header ul {
+
+    display: flex;
+  
+
+}
+
+
+li {
+
+    margin-left: 50px;
+
+    list-style-type: none;
+
+    font-style: normal;
+
+    font-weight: 400;
+
+    font-size: 18px;
+
+    color: white;
+
+}
+
+#nav-icon{display:none;}
+
+a {
+
+    text-decoration: none;
+
+    color: white;
+
+}
+a.icon {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+li:hover {
+  font-weight:bold;
+  color: rgb(247, 186, 108);
+  transition: 1s;
+}
+.logo{
+  color: white;
+  font-size: 30px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#intro {
+
+    margin-top: 176px;
+
+    margin-bottom: 59px;
+
+}
+
+
+#intro_title {
+
+    color: white;
+
+    font-style: normal;
+
+    font-size: 50px;
+  margin-bottom: 30px;
+
+    line-height: 60px;
+
+    max-width: 619px;
+
+}
+
+
+#intro_sub {
+
+    font-size: 16px;
+
+    line-height: 24px;
+
+    max-width: 546px;
+
+    color: white;
+
+}
+
+
+#setField {
+
+    border: 0;
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+}
+
+
+.inputText {
+
+    border: 0;
+
+    background-color: transparent;
+
+    color: white;
+
+    margin: 22px;
+
+}
+
+
+.inputDiv {
+
+    border-bottom: 1px solid white;
+
+    margin-right: 61px;
+
+}
+
+
+.inputText:focus {
+
+    outline: none;
+
+}
+
+
+.inputText::placeholder {
+
+    color: white;
+
+}
+
+
+#btn_search {
+
+    padding: 15px 39px;
+
+    background-color: #1b7dff;
+
+    color: rgb(238, 229, 229);
+
+}
+.benefits{
+  max-width:95%;
+  margin: 0 auto;
+  background-color:white;
+  padding-top: 4%;
+}
+.items{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+margin-top: 50px;
+padding-bottom: 40px;
+}
+  .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 25%;
+    min-width: 200px;
+    padding: 20px;
+    margin: 5px;
+    position: relative;
+    padding-bottom: 70px;
+  }
+  
+
+.benefits-text{
+  margin-top: 1em;
+  
+}
+.ben-header{
+  text-align: center;
+}
+.ben-image{
+  max-width:250px;
+}
+#minmenu{
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+
+  text-align: center;
+  display: none;
+}
+#minmenu li{color:black;
+  border: 1px solid gray;
+  background-color: white;
+  font-size: 30px;
+  padding: 20px;
+  margin: 5px;
+  
+}
+.buy-now{
+  position: absolute;
+  bottom: 15px;
+  background-color: rgba(245, 127, 30, 0.26);
+  padding: 5px 20px;
+  margin: 10px;
+  font-size: 20px;
+}
+.buy-now:hover{
+  background-color: rgb(105, 55, 7);
+  transition: 1s;
+}
+.cart{
+  height: 1000px;
+}
+.centered-header{
+ color:black; text-align: center;
+ margin: auto 50px;
+}
+.in-cart{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+.elem{display: flex;
+  padding:40px;
+  margin:5px;
+  border: 1px black solid;
+width: 500px;}
+
+.elem-image{
+  width: 100px;
+  margin: 0 20px;
+}
+.elem-description{margin: 30px 5px;}
+.counter{
+  background-color: gray;
+  border: 1px solid rgb(49, 47, 47);
+  width: 10px;
+}
+@media only screen and (max-width: 750px){
+  header,fieldset,.items{ display:flex;}
+  #header ul{display:none;}
+  .item{
+    max-width:400px;  
+
+  }
+
+  #intro-title{font-size:20px;}
+  #btn_search{margin-top:30px;}
+  #nav-icon{display:flex;
+    flex-direction: column;
+  padding:5px;
+background-color: beige;
+border-radius: 5px;}
+  .line{width: 30px;
+  height: 3px;
+background-color: rgb(83, 83, 83);
+margin: 4px;}
+}
