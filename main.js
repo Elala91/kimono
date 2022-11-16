@@ -16,14 +16,20 @@ function myFunction() {
 
 // document.getElementById("buy-1").setAttribute('onclick', setElem);
 
-function setElem(){ alert(1);
-    let elem={name:'flower kimono',material:'silk',cost:450, amount:1};
-  window.localStorage.setItem("elem",elem);
-  console.log(elem);
+function setElem(element){
+    let products_basket = (window.localStorage.getItem("elem"))? JSON.parse(window.localStorage.getItem("elem")) : [];
+    let parent = element.closest('.item');
+    console.log(products_basket[parent.dataset.id]);
+    if (products_basket[parent.dataset.id]) {
+      products_basket[parent.dataset.id].count++;
+    } else {
+      products_basket[parent.dataset.id] = {
+        name: parent.querySelector('h4').textContent,
+        description: parent.querySelector('.benefits-text').textContent,
+        source: parent.querySelector('img').getAttribute('src'),
+        count: 1
+      };
+    }
 
+    window.localStorage.setItem("elem", JSON.stringify(products_basket));
 };
-function getall(){
-  console.log(window.localStorage.getItem("elem"));
-  alert(elem.amount);
-  
-}
