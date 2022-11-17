@@ -26,5 +26,6 @@ let prices = document.querySelectorAll(".price");
 let amounts = document.querySelectorAll(".elem-num");
 for (let i = 0; i < prices.length; i++) {
     sum = sum + parseInt(prices[i].innerHTML) * parseInt(amounts[i].innerHTML);
+    alert(sum);
 }
 document.getElementById("total").innerHTML = sum;
