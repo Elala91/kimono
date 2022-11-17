@@ -1,30 +1,83 @@
-let basket = (window.localStorage.getItem("elem")) ? JSON.parse(window.localStorage.getItem("elem")) : [];
+<!DOCTYPE html>
+<html lang="en">
 
-console.log(basket);
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odigo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-basket.forEach(element => {
-    if (element) {
-        let div = document.createElement('div');
-        div.classList.add('elem');
-        div.innerHTML = `
-            <img src="${element.source}" alt="" class="elem-image">
-            <div class="elem-info">
-                <h3 class="elem-head">${element.name}</h3>
-                <p class="elem-description">${element.description}</p>
-                <p class="elem-description">Price : <span class='price'>
-                ${element.cost}</span> $</p>
-                <button class="counter" id="plus">+</button>
-                <span class="elem-num">${element.count}</span>
-                <button class="counter" id="minus">-</button>
+<body>
+    <ul id="minmenu">
+        <a href="index.html">
+            <li>Home</li>
+        </a>
+        <a href="catalog.html">
+            <li>Catalog</li>
+        </a>
+        <a href="cart.html">
+            <li>Cart</li>
+        </a>
+        <a href="https://shop.japanobjects.com/blogs/editorial/kimono-patterns">
+            <li>Original website</li>
+        </a>
+    </ul>
+    <div class="container">
+        <div id="header">
+            <div class="logo">ElKimono</div>
+            <ul id="myLinks">
+                <a href="index.html">
+                    <li>Home</li>
+                </a>
+                <a href="catalog.html">
+                    <li>Catalog</li>
+                </a>
+                <a href="cart.html">
+                    <li>Cart</li>
+                </a>
+                <a href="https://shop.japanobjects.com/blogs/editorial/kimono-patterns">
+                    <li>Original website</li>
+                </a>
+            </ul>
+            <button id="nav-icon" onclick="myFunction()">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </button>
+        </div>
+    </div>
+    <div class="benefits">
+        <div class="container">
+            <div class="cart">
+                <h2 class="ben-header">Cart</h2>
+                <a href="index.html" class="centered-header">
+                    <h3>Continue shopping</h3>
+                </a>
+                <div class="in-cart">
+                    <div class="elem-total">
+                        <h2>Total <span id="total">0</span><span> $</span> </h2>
+                        <button class="pay" id="pay">PAY</button>
+                    </div>
+                    <div class="elems">
+                        <!--<div class="elem">
+                            <img src="images/1.webp" alt="" class="elem-image">
+                            <div class="elem-info">
+                                <h3 class="elem-head">Kimono</h3>
+                                <p class="elem-description">Yellow kimono with flowers</p>
+                                <button class="counter" id="plus">+</button>
+                                <span class="elem-num">0</span>
+                                <button class="counter" id="minus">-</button>
+                            </div>
+                        </div>-->
+                    </div>
+                </div>
             </div>
-        `;
-        document.querySelector('.elems').append(div);
-    }
-});
-let sum = 0;
-let prices = document.querySelectorAll(".price");
-let amounts = document.querySelectorAll(".elem-num");
-for (let i = 0; i < prices.length; i++) {
-    sum = sum + parseInt(prices[i].innerHTML) * parseInt(amounts[i].innerHTML);
-}
-document.getElementById("total").innerHTML = sum;
+        </div>
+    </div>
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+</body>
+
+</html>
