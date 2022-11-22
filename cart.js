@@ -39,6 +39,5 @@ function minus(element){
     let num=element.closest(".elem-info");
     num.querySelector('.elem-num').innerHTML=
     parseInt(num.querySelector('.elem-num').innerHTML)-1;
-    document.getElementById("total").innerHTML = sum;
     total();
 }
